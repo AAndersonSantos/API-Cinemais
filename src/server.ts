@@ -1,11 +1,13 @@
 import Fastify from "fastify";
 import mediaRoutes from "./routes/media.routes";
 import { connectDB } from "./db";
+import favoriteRoutes from "./routes/favorite.routes";
 
 const app = Fastify({ logger: true });
 
 app.get("/", async () => ({ message: "Hello Fastify 🚀" }));
 
+app.register(favoriteRoutes);
 app.register(mediaRoutes);
 
 const start = async () => {
