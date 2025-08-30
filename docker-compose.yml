@@ -12,8 +12,10 @@ services:
       - mongodb
     environment:
       - MONGO_URL=${MONGO_URL}
+      - NODE_ENV=development
     volumes:
       - ./:/app:cached
+      - /app/node_modules
       
   mongodb:
     image: mongo:7
