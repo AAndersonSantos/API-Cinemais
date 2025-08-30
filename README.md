@@ -48,8 +48,11 @@ O projeto é totalmente containerizado com Docker e conta com validações usand
 ```
 MONGO_URL=mongodb://database-cinemais:27017/cinemais
 ```
-
-### 2. Suba os containers:
+### 2. Instale as dependências localmente (para VSCode funcionar):
+```
+npm install
+```
+### 3. Suba os containers:
 ```
 docker compose up -d --build
 ```
